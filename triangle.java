@@ -11,12 +11,12 @@ public class TriangleType {
       return "Each length must be a positive number."; 
     }
     else if(fSide == sSide && tSide == sSide ){ // check if the triangle is an Equilateral 
-      return "Equilateral";
+      return "Triangle is an Equilateral";
     }
     else if(fSide == sSide || tSide == sSide || fSide == tSide){ // check if the triangle is an Isosceles
-      return "Isosceles";
+      return "Triangle is an Isosceles";
     }
     else      // Otherwise, it is a Scalene
-      return "Scalene";
+      return "Triangle is a Scalene";
   }
 }
