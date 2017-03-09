@@ -1,35 +1,22 @@
-public class HelloWorld{  // arguments are passed using the text field below this editor  
-  public static void main(String[] args)  {    
-    Triangle triangle = new Triangle(3,3,7);    
-    System.out.print(triangle.getType());  
+public class TriangleType {
+  
+  public static void main(String[] args) { 
+      System.out.print(getTriangleType(2,2,3333));  // a sample call
   }
-}// you can add other public classes to this editor in any order
-public class Triangle{  
-  private int firstSide;  
-  private int secondSide;  
-  private int thirdSide;      
-  public Triangle()  {  
-  }    
-  public Triangle(int a,int b,int c)  {    
-    firstSide = a;    
-    secondSide = b;    
-    thirdSide = c;  
-  }      
-  public void setFirstSide(int lenght)  {   
-    firstSide = lenght;  
-  }    
-  public void setSecondSide(int lenght)  {    
-    secondSide = lenght;  
-  }    
-  public void setThirdSide(int lenght)  {   
-    thirdSide = lenght;  
-  }  
-  public String getType()  {    
-    if(firstSide == secondSide && thirdSide == secondSide )     
-      return "Equilateral";    
-    else if(firstSide == secondSide || thirdSide == secondSide || firstSide == thirdSide)      
-      return "Isosceles";    
-    else       
-      return "Scalene";  
-  }    
+  
+  // function to return the type of a triangle whose length of the sides passed as inputs.
+  static String getTriangleType(int fSide, int sSide, int tSide){
+    
+    if(fSide <= 0 || sSide <= 0 || tSide <= 0){ // each side of a triangle must be positive
+      return "Each length must be a positive number."; 
+    }
+    else if(fSide == sSide && tSide == sSide ){ // check if the triangle is an Equilateral 
+      return "Equilateral";
+    }
+    else if(fSide == sSide || tSide == sSide || fSide == tSide){ // check if the triangle is an Isosceles
+      return "Isosceles";
+    }
+    else      // Otherwise, it is a Scalene
+      return "Scalene";
+  }
 }
