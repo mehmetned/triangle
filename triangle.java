@@ -7,7 +7,7 @@ public class TriangleType {
   // function to return the type of a triangle whose length of the sides passed as inputs.
   static String getTriangleType(int fSide, int sSide, int tSide){
     
-    if(fSide <= 0 || sSide <= 0 || tSide <= 0){ // each side of a triangle must be positive
+    if(fSide <= 0 || sSide <= 0 || tSide <= 0){ // each length of the sides must be positive
       return "Each length must be a positive number."; 
     }
     else if(fSide == sSide && tSide == sSide ){ // check if the triangle is an Equilateral 
